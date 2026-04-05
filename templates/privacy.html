@@ -1,0 +1,208 @@
+{% extends "base.html" %}
+
+{% block title %}Privacy Policy — Spendly{% endblock %}
+
+{% block head %}
+<style>
+    .terms-section {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 0 1.5rem 4rem;
+    }
+    .terms-section h2 {
+        margin-top: 2.5rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+    }
+    .badge {
+        display: inline-block;
+        font-size: 0.65rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 0.2rem 0.55rem;
+        border-radius: 20px;
+        vertical-align: middle;
+        font-family: 'DM Sans', sans-serif;
+    }
+    .badge-mandatory {
+        background: #fee2e2;
+        color: #b91c1c;
+        border: 1px solid #fca5a5;
+    }
+    .badge-good {
+        background: #d1fae5;
+        color: #065f46;
+        border: 1px solid #6ee7b7;
+    }
+    .badge-info {
+        background: #dbeafe;
+        color: #1e40af;
+        border: 1px solid #93c5fd;
+    }
+    .terms-card {
+        border-radius: 12px;
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .terms-card.mandatory {
+        background: #fff5f5;
+        border-left: 4px solid #ef4444;
+    }
+    .terms-card.good {
+        background: #f0fdf4;
+        border-left: 4px solid #22c55e;
+    }
+    .terms-card.info {
+        background: #eff6ff;
+        border-left: 4px solid #3b82f6;
+    }
+    .terms-list {
+        list-style: none;
+        padding: 0;
+        margin: 0.75rem 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .terms-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.6rem;
+        font-size: 0.95rem;
+    }
+    .terms-list li::before {
+        content: '';
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-top: 0.45em;
+        flex-shrink: 0;
+    }
+    .terms-list li.mandatory::before { background: #ef4444; }
+    .terms-list li.good::before      { background: #22c55e; }
+    .terms-list li.info::before      { background: #3b82f6; }
+    .legend {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        background: #f8f8f8;
+        border-radius: 10px;
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 2rem;
+        font-size: 0.85rem;
+        font-family: 'DM Sans', sans-serif;
+        flex-wrap: wrap;
+    }
+    .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+    .legend-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<section class="hero" style="padding-bottom: 3rem;">
+    <div class="hero-inner" style="max-width: 720px;">
+        <h1 class="hero-title" style="font-size: 2.5rem;">Privacy Policy</h1>
+        <p class="hero-subtitle">Last updated: April 2026</p>
+    </div>
+</section>
+
+<section class="terms-section">
+
+    <div class="legend">
+        <strong>Legend:</strong>
+        <div class="legend-item">
+            <div class="legend-dot" style="background:#ef4444;"></div>
+            Mandatory — legally binding, non-negotiable
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot" style="background:#22c55e;"></div>
+            Good to have — strongly recommended
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot" style="background:#3b82f6;"></div>
+            Informational — context and disclosures
+        </div>
+    </div>
+
+    <!-- Section 1 -->
+    <h2>1. Data We Collect <span class="badge badge-mandatory">Mandatory</span></h2>
+    <div class="terms-card mandatory">
+        <p>When you use Spendly, we collect the following information:</p>
+        <ul class="terms-list">
+            <li class="mandatory">Account information — your name and email address provided at registration.</li>
+            <li class="mandatory">Expense records — amounts, categories, dates, and descriptions you enter into the app.</li>
+            <li class="info">Usage data — basic logs of app interactions used to diagnose errors and improve the service.</li>
+        </ul>
+        <p style="margin-top:0.75rem;">We do not collect payment card details, government IDs, or any sensitive financial credentials.</p>
+    </div>
+
+    <!-- Section 2 -->
+    <h2>2. How We Use Your Data <span class="badge badge-mandatory">Mandatory</span></h2>
+    <div class="terms-card mandatory">
+        <p>Your data is used exclusively to provide and improve Spendly. Specifically:</p>
+        <ul class="terms-list">
+            <li class="mandatory">To authenticate your account and display your personalised expense history.</li>
+            <li class="mandatory">To generate summaries, category breakdowns, and spending insights shown in the app.</li>
+            <li class="good">To send occasional service-related notifications (e.g., account activity alerts).</li>
+            <li class="mandatory">We will never sell, rent, or share your personal data with advertisers or data brokers.</li>
+        </ul>
+    </div>
+
+    <!-- Section 3 -->
+    <h2>3. Data Storage <span class="badge badge-info">Informational</span></h2>
+    <div class="terms-card info">
+        <p>Your data is stored on secured servers. We apply industry-standard measures to protect it against unauthorised access, including:</p>
+        <ul class="terms-list">
+            <li class="mandatory">Encrypted storage of passwords (we never store plaintext passwords).</li>
+            <li class="good">Regular security reviews of our infrastructure.</li>
+            <li class="info">Data is retained for as long as your account is active. You may request deletion at any time.</li>
+        </ul>
+    </div>
+
+    <!-- Section 4 -->
+    <h2>4. Third-Party Services <span class="badge badge-info">Informational</span></h2>
+    <div class="terms-card info">
+        <p>Spendly may rely on the following third-party services to operate:</p>
+        <ul class="terms-list">
+            <li class="info">Hosting providers — to store and serve the application.</li>
+            <li class="info">Analytics tools — only aggregated, anonymised data is shared; no personally identifiable information is transmitted.</li>
+            <li class="mandatory">We do not integrate with any payment processors or bank APIs that would access your financial accounts.</li>
+        </ul>
+        <p style="margin-top:0.75rem;">Each third-party service is governed by its own privacy policy. We encourage you to review them.</p>
+    </div>
+
+    <!-- Section 5 -->
+    <h2>5. Your Rights <span class="badge badge-mandatory">Mandatory</span></h2>
+    <div class="terms-card mandatory">
+        <p>You have the following rights regarding your personal data:</p>
+        <ul class="terms-list">
+            <li class="mandatory">Access — request a copy of the data we hold about you.</li>
+            <li class="mandatory">Correction — ask us to correct inaccurate or incomplete data.</li>
+            <li class="mandatory">Deletion — request that your account and all associated data be permanently deleted.</li>
+            <li class="good">Portability — request your expense data in a machine-readable format.</li>
+        </ul>
+    </div>
+
+    <!-- Section 6 -->
+    <h2>6. Contact Us <span class="badge badge-good">Good to have</span></h2>
+    <div class="terms-card good">
+        <p>If you have questions, concerns, or requests regarding this Privacy Policy, please reach out through the contact details provided in the app. We aim to respond to all privacy-related enquiries within 7 business days.</p>
+    </div>
+
+</section>
+
+{% endblock %}
