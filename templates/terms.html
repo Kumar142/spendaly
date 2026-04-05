@@ -1,0 +1,193 @@
+{% extends "base.html" %}
+
+{% block title %}Terms and Conditions — Spendly{% endblock %}
+
+{% block head %}
+<style>
+    .terms-section {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 0 1.5rem 4rem;
+    }
+    .terms-section h2 {
+        margin-top: 2.5rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+    }
+    .badge {
+        display: inline-block;
+        font-size: 0.65rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        padding: 0.2rem 0.55rem;
+        border-radius: 20px;
+        vertical-align: middle;
+        font-family: 'DM Sans', sans-serif;
+    }
+    .badge-mandatory {
+        background: #fee2e2;
+        color: #b91c1c;
+        border: 1px solid #fca5a5;
+    }
+    .badge-good {
+        background: #d1fae5;
+        color: #065f46;
+        border: 1px solid #6ee7b7;
+    }
+    .badge-info {
+        background: #dbeafe;
+        color: #1e40af;
+        border: 1px solid #93c5fd;
+    }
+
+    /* Section card tinting */
+    .terms-card {
+        border-radius: 12px;
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .terms-card.mandatory {
+        background: #fff5f5;
+        border-left: 4px solid #ef4444;
+    }
+    .terms-card.good {
+        background: #f0fdf4;
+        border-left: 4px solid #22c55e;
+    }
+    .terms-card.info {
+        background: #eff6ff;
+        border-left: 4px solid #3b82f6;
+    }
+
+    /* List items with colored dots */
+    .terms-list {
+        list-style: none;
+        padding: 0;
+        margin: 0.75rem 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .terms-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.6rem;
+        font-size: 0.95rem;
+    }
+    .terms-list li::before {
+        content: '';
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-top: 0.45em;
+        flex-shrink: 0;
+    }
+    .terms-list li.mandatory::before { background: #ef4444; }
+    .terms-list li.good::before     { background: #22c55e; }
+
+    .legend {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        background: #f8f8f8;
+        border-radius: 10px;
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 2rem;
+        font-size: 0.85rem;
+        font-family: 'DM Sans', sans-serif;
+        flex-wrap: wrap;
+    }
+    .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+    .legend-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<section class="hero" style="padding-bottom: 3rem;">
+    <div class="hero-inner" style="max-width: 720px;">
+        <h1 class="hero-title" style="font-size: 2.5rem;">Terms and Conditions</h1>
+        <p class="hero-subtitle">Last updated: April 2026</p>
+    </div>
+</section>
+
+<section class="terms-section">
+
+    <div class="legend">
+        <strong>Legend:</strong>
+        <div class="legend-item">
+            <div class="legend-dot" style="background:#ef4444;"></div>
+            Mandatory — legally binding, non-negotiable
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot" style="background:#22c55e;"></div>
+            Good to have — strongly recommended
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot" style="background:#3b82f6;"></div>
+            Informational — context and disclosures
+        </div>
+    </div>
+
+    <!-- Section 1 -->
+    <h2>1. Acceptance of Terms <span class="badge badge-mandatory">Mandatory</span></h2>
+    <div class="terms-card mandatory">
+        <p>By accessing or using Spendly, you agree to be bound by these Terms and Conditions. If you do not agree to these terms, please do not use the service.</p>
+    </div>
+
+    <!-- Section 2 -->
+    <h2>2. Use of Service <span class="badge badge-mandatory">Mandatory</span></h2>
+    <div class="terms-card mandatory">
+        <p>Spendly is a personal expense tracking tool intended for individual, non-commercial use. You agree to:</p>
+        <ul class="terms-list">
+            <li class="good">Provide accurate information when creating your account.</li>
+            <li class="good">Keep your login credentials confidential.</li>
+            <li class="mandatory">Not use the service for any unlawful purpose or in violation of any applicable regulations.</li>
+            <li class="mandatory">Not attempt to gain unauthorised access to any part of the service or its infrastructure.</li>
+        </ul>
+    </div>
+
+    <!-- Section 3 -->
+    <h2>3. User Data <span class="badge badge-info">Informational</span></h2>
+    <div class="terms-card info">
+        <p>You retain ownership of all expense data you enter into Spendly. We do not sell or share your personal financial data with third parties. By using the service, you grant Spendly a limited licence to store and process your data solely for the purpose of providing the service to you.</p>
+        <ul class="terms-list">
+            <li class="good">Maintaining backups of your own data is strongly recommended.</li>
+            <li class="mandatory">We reserve the right to delete data associated with inactive accounts after a reasonable notice period.</li>
+        </ul>
+    </div>
+
+    <!-- Section 4 -->
+    <h2>4. Limitations of Liability <span class="badge badge-mandatory">Mandatory</span></h2>
+    <div class="terms-card mandatory">
+        <p>Spendly is provided "as is" without warranties of any kind, express or implied. To the fullest extent permitted by law, Spendly and its developers shall not be liable for any indirect, incidental, or consequential damages arising from your use of or inability to use the service, including but not limited to loss of data or financial decisions made based on information presented in the app.</p>
+    </div>
+
+    <!-- Section 5 -->
+    <h2>5. Changes to Terms <span class="badge badge-info">Informational</span></h2>
+    <div class="terms-card info">
+        <p>We may update these Terms and Conditions from time to time. When we do, we will revise the "Last updated" date at the top of this page. Continued use of Spendly after changes are posted constitutes your acceptance of the revised terms.</p>
+    </div>
+
+    <!-- Section 6 -->
+    <h2>6. Contact <span class="badge badge-good">Good to have</span></h2>
+    <div class="terms-card good">
+        <p>If you have any questions about these Terms and Conditions, please reach out through the contact details provided in the app.</p>
+    </div>
+
+</section>
+
+{% endblock %}
